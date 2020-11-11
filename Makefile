@@ -9,8 +9,8 @@ libMyPeri.a: led.o
 led.o: led.h led.c		
 		$(CC) led.c -o led.o -c
 
-ledtest: led.h libMyPeri.a	
-		$(CC) ledtest.c -o ledtest -l MyPeri -L.	
+ledtest: led.h ledtest.c libMyPeri.a	
+		$(CC) ledtest.c -o ledtest -l MyPeri -L.
 		scp ledtest ecube@192.168.0.223:/home/ecube
 
 clean:	
