@@ -63,5 +63,6 @@ int LedLibBlink(int ledNumber, int nth, int msec)				//1~8까지의 led를 하�
 		usleep(1000*msec);
 		ledLibOnOff(ledNumber, 0); //OFF.
 		usleep(1000*msec);
+		return 1;
 	}
 }
